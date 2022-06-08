@@ -1,6 +1,7 @@
 // variable :
 // color
 $primary-color: #9356dc;
+$primary-color-light: hsl(267deg 100% 96%);
 $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
 $dark-color: hsl(0deg 0% 21%);
@@ -16,9 +17,5 @@ $font-size-large: 20px;
 $font-size-xlarge: 24px;
 
 // breakpoints-desktop:
-$breakpoints-desktop: (
-  desktop: 992px,
-);
-$breakpoints-tablette: (
-  tablet: 768px,
-);
+$breakpoints-desktop: 992px;
+$breakpoints-tablet: 768px;
