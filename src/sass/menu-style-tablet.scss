@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./keyframes";
 
 @media screen and (min-width: $breakpoints-tablet) and (max-width: $breakpoints-desktop) {
   body {
@@ -31,7 +32,7 @@
   //  main image
   .main {
     .header__img {
-      height: 350px;
+      height: 250px;
       width: 100%;
       .header__img-style {
         object-fit: cover;
@@ -85,24 +86,89 @@
       box-shadow: 4px 4px 6px $lightgray-color;
       height: 70px;
       justify-content: space-between;
-      padding-right: 10px;
+      &:nth-child(1n) {
+        transition: 0.5s;
+        animation: fadein 1s;
+      }
+      &:nth-child(2n) {
+        transition: 0.5s;
+        animation: fadein 2s;
+      }
+      &:nth-child(3n) {
+        transition: 0.5s;
+        animation: fadein 3s;
+      }
+
       &:last-child {
         margin: 0;
       }
-      .menu__card-text {
-        display: flex;
-        flex-direction: column;
+      .check-box {
+        width: 20%;
+        height: 100%;
+        display: none;
+        align-items: center;
         justify-content: center;
-        padding-left: 10px;
-        h4 {
-          margin: 0;
-          padding: 2px;
-        }
-        p {
-          padding: 2px;
-          margin: 0;
+        background-color: $tertiary-color;
+        border-radius: 0 16px 16px 0;
+        animation: slideleft 0.5s;
+        i {
+          animation: spin 0.5s;
+          font-size: $font-size-xlarge;
+          color: $white-color;
         }
       }
+      &:hover {
+        cursor: pointer;
+        .menu__card-text {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        .menu__card-price {
+          margin: 0;
+        }
+        .check-box {
+          width: 20%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $tertiary-color;
+          border-radius: 0 16px 16px 0;
+          i {
+            font-size: $font-size-xlarge;
+            color: $white-color;
+          }
+        }
+      }
+    }
+    .menu__card-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 10px;
+      width: 80%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      h4 {
+        overflow: hidden;
+        width: 100%;
+        text-overflow: ellipsis;
+        margin: 0;
+        padding: 2px;
+      }
+      p {
+        overflow: hidden;
+        width: 100%;
+        text-overflow: ellipsis;
+        padding: 2px;
+        margin: 0;
+        text-overflow: ellipsis;
+      }
+    }
+    .menu__card-price {
+      width: 15%;
     }
     .starter {
       width: 92%;
@@ -124,7 +190,7 @@
     background-color: $lightgray-color;
     .menu__btn {
       height: 50px;
-      width: 50%;
+      width: 30%;
       border-radius: 24px 24px 24px 24px;
       background: linear-gradient(
         to top left,
