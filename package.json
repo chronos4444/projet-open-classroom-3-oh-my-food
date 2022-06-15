@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:sass": "sass sass:css",
+    "build:sass": "sass src/sass:src/css",
     "watch:sass": "sass src/sass:src/css --watch"
   },
   "repository": {

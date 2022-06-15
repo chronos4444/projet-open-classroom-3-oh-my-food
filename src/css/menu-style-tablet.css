@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
   body {
     width: 100%;
     height: 100%;
@@ -26,7 +26,7 @@
     font-size: 40px;
   }
   .main .header__img {
-    height: 250px;
+    height: 350px;
     width: 100%;
   }
   .main .header__img .header__img-style {
@@ -131,32 +131,37 @@
     padding: 10px;
   }
   .footer h2 {
-    font-size: 16px;
-    font-weight: 200;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 400;
     font-family: Shrikhand;
     color: #ffffff;
   }
   .footer .footer__container {
     padding-left: 20px;
   }
-  .footer ul {
+  .footer .footer-ul {
+    display: flex;
+    justify-content: space-around;
     list-style-type: none;
     padding: 0;
     line-height: 1.5;
   }
-  .footer ul a {
+  .footer .footer-ul .footer-ul__li-a {
+    font-weight: 600;
     color: #ffffff;
     text-decoration: none;
     opacity: 1;
   }
-  .footer ul a:hover {
+  .footer .footer-ul .footer-ul__li-a:hover {
     opacity: 0.8;
   }
-  .footer i {
+  .footer .footer-ul__li-icon {
     width: 12px;
     margin-right: 10px;
     color: #ffffff;
   }
 }
 
-/*# sourceMappingURL=menu-style.css.map */
+/*# sourceMappingURL=menu-style-tablet.css.map */
