@@ -39,10 +39,11 @@
     align-items: center;
     background-color: #ffffff;
   }
-  .header i {
+  .header a {
     font-size: 28px;
     position: relative;
-    right: 60px;
+    right: 33%;
+    color: black;
   }
   .header h1 {
     position: relative;
@@ -77,8 +78,29 @@
     font-weight: 100;
     font-family: Shrikhand;
   }
-  .menu .menu__main-title i {
-    padding-top: 2%;
+  .menu .menu__main-title .menu-main-title__btn {
+    border: none;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    background-clip: text;
+  }
+  .menu .menu__main-title .menu-main-title__btn .menu-main-title__btn-icon-fill {
+    display: none;
+    background-image: linear-gradient(200deg, #9356dc, #ff79da);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 24px;
+  }
+  .menu .menu__main-title .menu-main-title__btn .menu-main-title__btn-icon-umpty {
+    font-size: 24px;
+    font-weight: 100;
+  }
+  .menu .menu__main-title .menu-main-title__btn:hover .menu-main-title__btn-icon-fill {
+    display: flex;
+  }
+  .menu .menu__main-title .menu-main-title__btn:hover .menu-main-title__btn-icon-umpty {
+    display: none;
   }
   .menu .menu__title {
     margin-top: 30px;

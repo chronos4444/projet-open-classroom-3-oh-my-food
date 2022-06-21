@@ -43,11 +43,6 @@
     background-color: #ffffff;
     padding-top: 1%;
   }
-  .header i {
-    font-size: 28px;
-    position: relative;
-    right: 60px;
-  }
   .header .size-logo {
     display: flex;
     width: 50%;
@@ -212,6 +207,7 @@
   }
   .restaurant-list .restaurant-list-container .card-restaurant .card-restaurant__header .card-restaurant__header-img {
     max-width: 100%;
+    height: 100%;
     height: auto;
     object-fit: contain;
     border-radius: 16px 16px 0px 0px;
@@ -233,6 +229,30 @@
     font-size: 16px;
     margin: 0;
     font-weight: 400;
+  }
+  .restaurant-list .restaurant-list-container .card-restaurant .card-restaurant__btn {
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    background-clip: text;
+  }
+  .restaurant-list .restaurant-list-container .card-restaurant .card-restaurant__btn .card-restaurant__btn-icon-fill {
+    display: none;
+    background-image: linear-gradient(200deg, #9356dc, #ff79da);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 24px;
+  }
+  .restaurant-list .restaurant-list-container .card-restaurant .card-restaurant__btn .card-restaurant__btn-icon-umpty {
+    font-size: 24px;
+    font-weight: 100;
+  }
+  .restaurant-list .restaurant-list-container .card-restaurant .card-restaurant__btn:hover .card-restaurant__btn-icon-fill {
+    display: flex;
+  }
+  .restaurant-list .restaurant-list-container .card-restaurant .card-restaurant__btn:hover .card-restaurant__btn-icon-umpty {
+    display: none;
   }
   .restaurant-list .card-restaurant.new .card-restaurant__header::after {
     font-size: 24px;
