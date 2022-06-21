@@ -1,12 +1,14 @@
 @keyframes fadein {
-  from {
+  0% {
+    transform: translateY(20px);
     opacity: 0;
   }
-  to {
+  100% {
+    transform: translateY(0px);
     opacity: 1;
   }
 }
-@keyframes slideleft {
+@keyframes slide {
   0% {
     width: 0%;
   }

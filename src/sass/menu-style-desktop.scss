@@ -98,11 +98,11 @@
         }
         &:nth-child(2n) {
           transition: 0.5s;
-          animation: fadein 2s;
+          animation: fadein 1.3s;
         }
         &:nth-child(3n) {
           transition: 0.5s;
-          animation: fadein 3s;
+          animation: fadein 1.6s;
         }
         &:last-child {
           margin: 0;
@@ -115,7 +115,7 @@
           justify-content: center;
           background-color: $tertiary-color;
           border-radius: 0 16px 16px 0;
-          animation: slideleft 0.5s;
+          animation: slide 0.5s;
           i {
             animation: spin 0.5s;
             font-size: $font-size-xlarge;

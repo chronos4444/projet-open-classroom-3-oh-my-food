@@ -1,12 +1,14 @@
 @keyframes fadein {
-  from {
+  0% {
+    transform: translateY(20px);
     opacity: 0;
   }
-  to {
+  100% {
+    transform: translateY(0px);
     opacity: 1;
   }
 }
-@keyframes slideleft {
+@keyframes slide {
   0% {
     width: 0%;
   }
@@ -107,11 +109,11 @@
   }
   .menu .menu__card:nth-child(2n) {
     transition: 0.5s;
-    animation: fadein 2s;
+    animation: fadein 1.3s;
   }
   .menu .menu__card:nth-child(3n) {
     transition: 0.5s;
-    animation: fadein 3s;
+    animation: fadein 1.6s;
   }
   .menu .menu__card:last-child {
     margin: 0;
@@ -124,7 +126,7 @@
     justify-content: center;
     background-color: #99e2d0;
     border-radius: 0 16px 16px 0;
-    animation: slideleft 0.5s;
+    animation: slide 0.5s;
   }
   .menu .menu__card .check-box i {
     animation: spin 0.5s;
