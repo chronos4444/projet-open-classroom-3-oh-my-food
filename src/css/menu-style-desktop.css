@@ -121,6 +121,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   .menu .menu__container-cards .menu__card {
     display: flex;
@@ -144,6 +145,10 @@
   .menu .menu__container-cards .menu__card:nth-child(3n) {
     transition: 0.5s;
     animation: fadein 1.6s;
+  }
+  .menu .menu__container-cards .menu__card:nth-child(4n) {
+    transition: 0.5s;
+    animation: fadein 1.9s;
   }
   .menu .menu__container-cards .menu__card:last-child {
     margin: 0;

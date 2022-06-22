@@ -126,6 +126,10 @@
         transition: 0.5s;
         animation: fadein 1.6s;
       }
+      &:nth-child(4n) {
+        transition: 0.5s;
+        animation: fadein 1.9s;
+      }
 
       &:last-child {
         margin: 0;
