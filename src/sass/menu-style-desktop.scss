@@ -78,6 +78,7 @@
           -webkit-background-clip: text;
           color: transparent;
           font-size: $font-size-xlarge;
+          animation: heart-slide 1s;
         }
         .menu-main-title__btn-icon-umpty {
           font-size: $font-size-xlarge;
@@ -191,6 +192,7 @@
         white-space: nowrap;
         text-overflow: ellipsis;
         h4 {
+          font-size: $font-size-medium;
           overflow: hidden;
           width: 100%;
           text-overflow: ellipsis;
@@ -198,6 +200,7 @@
           padding: 2px;
         }
         p {
+          font-size: $font-size-medium;
           overflow: hidden;
           width: 100%;
           text-overflow: ellipsis;
@@ -246,6 +249,7 @@
       &:hover {
         filter: brightness(1.1);
         cursor: pointer;
+        box-shadow: 5px 5px 5px rgba(0, 0, 255, 0.2);
       }
     }
   }

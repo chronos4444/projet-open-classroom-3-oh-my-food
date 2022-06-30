@@ -25,3 +25,15 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes heart-slide {
+  from {
+    transform-origin: bottom;
+    transform: scaley(0);
+    opacity: 0.1;
+  }
+  to {
+    transform: scaley(1);
+    opacity: 1;
+  }
+}

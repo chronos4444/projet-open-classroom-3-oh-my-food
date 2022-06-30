@@ -24,6 +24,17 @@
     transform: rotate(360deg);
   }
 }
+@keyframes heart-slide {
+  from {
+    transform-origin: bottom;
+    transform: scaley(0);
+    opacity: 0.1;
+  }
+  to {
+    transform: scaley(1);
+    opacity: 1;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 992px) {
   body {
     width: 100%;
@@ -91,6 +102,7 @@
     -webkit-background-clip: text;
     color: transparent;
     font-size: 24px;
+    animation: heart-slide 0.8s;
   }
   .menu .menu__main-title .menu-main-title__btn .menu-main-title__btn-icon-umpty {
     font-size: 24px;
@@ -194,6 +206,7 @@
     text-overflow: ellipsis;
   }
   .menu .menu__card-text h4 {
+    font-size: 18px;
     overflow: hidden;
     width: 100%;
     text-overflow: ellipsis;
@@ -201,6 +214,7 @@
     padding: 2px;
   }
   .menu .menu__card-text p {
+    font-size: 16px;
     overflow: hidden;
     width: 100%;
     text-overflow: ellipsis;
@@ -241,6 +255,7 @@
   .section-menu__btn .menu__btn:hover {
     filter: brightness(1.1);
     cursor: pointer;
+    box-shadow: 5px 5px 5px rgba(0, 0, 255, 0.2);
   }
   .footer {
     background-color: #363636;

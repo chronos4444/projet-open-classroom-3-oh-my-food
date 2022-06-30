@@ -13,17 +13,17 @@
   }
   .header {
     width: 100%;
-    height: 160px;
+    height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: $white-color;
-    padding-top: 1%;
 
     .size-logo {
       display: flex;
-      width: 50%;
-      height: 140px;
+      width: 350px;
+      height: 100%;
+      height: auto;
     }
   }
   //  exploration
@@ -90,7 +90,7 @@
         &:hover {
           filter: brightness(1.1);
           cursor: pointer;
-          box-shadow: 5px 5px 5px $dark-color;
+          box-shadow: 5px 5px 5px rgba(0, 0, 255, 0.2);
         }
       }
     }
@@ -172,7 +172,7 @@
         display: flex;
         flex-direction: column;
         background-color: $white-color;
-        width: 40%;
+        max-width: 34%;
         height: 300px;
         margin-bottom: 5%;
         text-decoration: none;
@@ -182,7 +182,7 @@
         transition-property: transform;
         transition-duration: 800ms;
         &:hover {
-          transform: scale(1.17);
+          transform: scale(1.12);
         }
 
         .card-restaurant__header {
@@ -194,7 +194,7 @@
             max-width: 100%;
             height: 100%;
             height: auto;
-            object-fit: contain;
+            object-fit: cover;
             border-radius: 16px 16px 0px 0px;
           }
         }
@@ -232,6 +232,7 @@
             -webkit-background-clip: text;
             color: transparent;
             font-size: $font-size-xlarge;
+            animation: heart-slide 1s;
           }
           .card-restaurant__btn-icon-umpty {
             font-size: $font-size-xlarge;
@@ -249,7 +250,7 @@
       }
     }
     .card-restaurant.new .card-restaurant__header::after {
-      font-size: $font-size-xlarge;
+      font-size: $font-size-medium;
       content: "Nouveau";
       position: absolute;
       padding: 6px 10px;

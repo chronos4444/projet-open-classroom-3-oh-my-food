@@ -9,7 +9,7 @@
   }
   .header {
     width: 100%;
-    height: 100px;
+    height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,8 +17,9 @@
 
     .size-logo {
       display: flex;
-      width: 50%;
-      height: 80px;
+      width: 320px;
+      height: 100%;
+      height: auto;
     }
   }
   //  exploration
@@ -80,7 +81,7 @@
         &:hover {
           filter: brightness(1.1);
           cursor: pointer;
-          box-shadow: 15px 15px 15px $darkgray-color;
+          box-shadow: 5px 5px 5px rgba(0, 0, 255, 0.2);
         }
       }
     }
@@ -186,9 +187,9 @@
           position: relative;
           overflow: hidden;
           .card-restaurant__header-img {
-            max-width: 100%;
-            height: auto;
-            object-fit: contain;
+            min-width: 100%;
+            height: 100%;
+            object-fit: cover;
             border-radius: 16px 16px 0px 0px;
           }
         }
@@ -196,6 +197,7 @@
           display: flex;
           justify-content: space-between;
           padding: 16px;
+          max-height: 30%;
           .card-restaurant__content-text {
             margin: 0;
             .card-restaurant__title {
@@ -226,6 +228,7 @@
             -webkit-background-clip: text;
             color: transparent;
             font-size: $font-size-xlarge;
+            animation: heart-slide 1s;
           }
           .card-restaurant__btn-icon-umpty {
             font-size: $font-size-xlarge;

@@ -1,0 +1,76 @@
+@keyframes fadein {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes slide {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes heart-slide {
+  from {
+    transform-origin: bottom;
+    transform: scaley(0);
+    opacity: 0.1;
+  }
+  to {
+    transform: scaley(1);
+    opacity: 1;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  background-color: #159375;
+}
+
+.loader-section {
+  background-color: #159375;
+  height: 500px;
+  line-height: 500px;
+}
+.loader-section .loarder {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  border-radius: 50px;
+  border: 6px solid rgba(255, 255, 255, 0.4);
+  vertical-align: middle;
+  position: relative;
+}
+.loader-section .loarder::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  bottom: -6px;
+  right: -6px;
+  border-radius: 50px;
+  border: 6px solid transparent;
+  border-top-color: white;
+  border-bottom-color: white;
+  animation: spin 1s linear 0s infinite;
+}
+
+/*# sourceMappingURL=loarder.css.map */

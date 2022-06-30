@@ -24,6 +24,17 @@
     transform: rotate(360deg);
   }
 }
+@keyframes heart-slide {
+  from {
+    transform-origin: bottom;
+    transform: scaley(0);
+    opacity: 0.1;
+  }
+  to {
+    transform: scaley(1);
+    opacity: 1;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 992px) {
   body {
     width: 100%;
@@ -32,7 +43,7 @@
   }
   .header {
     width: 100%;
-    height: 100px;
+    height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,8 +51,9 @@
   }
   .header .size-logo {
     display: flex;
-    width: 50%;
-    height: 80px;
+    width: 320px;
+    height: 100%;
+    height: auto;
   }
   .exploration {
     background-color: #ffffff;
@@ -99,7 +111,7 @@
   .exploration .exploration-content .exploration-content__btn:hover {
     filter: brightness(1.1);
     cursor: pointer;
-    box-shadow: 15px 15px 15px #ebebeb;
+    box-shadow: 5px 5px 5px rgba(0, 0, 255, 0.2);
   }
   .main {
     display: flex;
@@ -199,15 +211,16 @@
     overflow: hidden;
   }
   .restaurant-list .restaurant-list-container .card-restaurant .card-restaurant__header .card-restaurant__header-img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 16px 16px 0px 0px;
   }
   .restaurant-list .restaurant-list-container .card-restaurant .card-restaurant__content {
     display: flex;
     justify-content: space-between;
     padding: 16px;
+    max-height: 30%;
   }
   .restaurant-list .restaurant-list-container .card-restaurant .card-restaurant__content .card-restaurant__content-text {
     margin: 0;
@@ -235,6 +248,7 @@
     -webkit-background-clip: text;
     color: transparent;
     font-size: 24px;
+    animation: heart-slide 1s;
   }
   .restaurant-list .restaurant-list-container .card-restaurant .card-restaurant__btn .card-restaurant__btn-icon-umpty {
     font-size: 24px;

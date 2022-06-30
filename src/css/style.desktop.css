@@ -24,6 +24,17 @@
     transform: rotate(360deg);
   }
 }
+@keyframes heart-slide {
+  from {
+    transform-origin: bottom;
+    transform: scaley(0);
+    opacity: 0.1;
+  }
+  to {
+    transform: scaley(1);
+    opacity: 1;
+  }
+}
 @media screen and (min-width: 992px) {
   body {
     width: 100%;
@@ -36,17 +47,17 @@
   }
   .header {
     width: 100%;
-    height: 160px;
+    height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
-    padding-top: 1%;
   }
   .header .size-logo {
     display: flex;
-    width: 50%;
-    height: 140px;
+    width: 350px;
+    height: 100%;
+    height: auto;
   }
   .exploration {
     display: flex;
@@ -109,7 +120,7 @@
   .exploration .exploration-content .exploration-content__btn:hover {
     filter: brightness(1.1);
     cursor: pointer;
-    box-shadow: 5px 5px 5px #363636;
+    box-shadow: 5px 5px 5px rgba(0, 0, 255, 0.2);
   }
   .user-guide {
     background-color: #ebebeb;
@@ -186,7 +197,7 @@
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
-    width: 40%;
+    max-width: 34%;
     height: 300px;
     margin-bottom: 5%;
     text-decoration: none;
@@ -197,7 +208,7 @@
     transition-duration: 800ms;
   }
   .restaurant-list .restaurant-list-container .card-restaurant:hover {
-    transform: scale(1.17);
+    transform: scale(1.12);
   }
   .restaurant-list .restaurant-list-container .card-restaurant .card-restaurant__header {
     height: 70%;
@@ -209,7 +220,7 @@
     max-width: 100%;
     height: 100%;
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 16px 16px 0px 0px;
   }
   .restaurant-list .restaurant-list-container .card-restaurant .card-restaurant__content {
@@ -243,6 +254,7 @@
     -webkit-background-clip: text;
     color: transparent;
     font-size: 24px;
+    animation: heart-slide 1s;
   }
   .restaurant-list .restaurant-list-container .card-restaurant .card-restaurant__btn .card-restaurant__btn-icon-umpty {
     font-size: 24px;
@@ -255,7 +267,7 @@
     display: none;
   }
   .restaurant-list .card-restaurant.new .card-restaurant__header::after {
-    font-size: 24px;
+    font-size: 16px;
     content: "Nouveau";
     position: absolute;
     padding: 6px 10px;
