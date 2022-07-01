@@ -1,5 +1,5 @@
-@import "./variables";
-@import "./keyframes";
+@import "utils/variables";
+@import "utils/keyframes";
 
 @media screen and (max-width: $breakpoints-tablet) {
   body {
@@ -60,37 +60,12 @@
         font-weight: 100;
         font-family: Shrikhand;
       }
-      .menu-main-title__btn {
-        border: none;
-        background-color: $lightgray-color;
-        cursor: pointer;
-        background-clip: text;
-        .menu-main-title__btn-icon-fill {
-          display: none;
-          background-image: linear-gradient(
-            200deg,
-            $primary-color,
-            $secondary-color
-          );
-          background-clip: text;
-          -webkit-background-clip: text;
-          color: transparent;
-          font-size: $font-size-xlarge;
-          animation: heart-slide 1s;
-        }
-        .menu-main-title__btn-icon-umpty {
-          font-size: $font-size-xlarge;
-          font-weight: 100;
-        }
-        &:hover {
-          .menu-main-title__btn-icon-fill {
-            display: flex;
-          }
-          .menu-main-title__btn-icon-umpty {
-            display: none;
-          }
+      @media screen and (max-width: 335px) {
+        h2 {
+          font-size: 18px;
         }
       }
+      @import "components/heart-menu";
     }
     .menu__title {
       h3 {

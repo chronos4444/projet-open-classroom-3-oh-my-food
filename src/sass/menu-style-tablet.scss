@@ -1,5 +1,6 @@
-@import "./variables";
-@import "./keyframes";
+@import "utils/variables";
+@import "utils/keyframes";
+@import "utils/mixins";
 
 @media screen and (min-width: $breakpoints-tablet) and (max-width: $breakpoints-desktop) {
   body {
@@ -60,37 +61,7 @@
         font-weight: 100;
         font-family: Shrikhand;
       }
-      .menu-main-title__btn {
-        border: none;
-        background-color: $lightgray-color;
-        cursor: pointer;
-        background-clip: text;
-        .menu-main-title__btn-icon-fill {
-          display: none;
-          background-image: linear-gradient(
-            200deg,
-            $primary-color,
-            $secondary-color
-          );
-          background-clip: text;
-          -webkit-background-clip: text;
-          color: transparent;
-          font-size: $font-size-xlarge;
-          animation: heart-slide 0.8s;
-        }
-        .menu-main-title__btn-icon-umpty {
-          font-size: $font-size-xlarge;
-          font-weight: 100;
-        }
-        &:hover {
-          .menu-main-title__btn-icon-fill {
-            display: flex;
-          }
-          .menu-main-title__btn-icon-umpty {
-            display: none;
-          }
-        }
-      }
+      @import "components/heart-menu";
     }
     .menu__title {
       h3 {
@@ -206,16 +177,13 @@
       width: 15%;
     }
     .starter {
-      width: 92%;
-      margin: auto;
+      @include fix-width;
     }
     .dish {
-      width: 92%;
-      margin: auto;
+      @include fix-width;
     }
     .dessert {
-      width: 92%;
-      margin: auto;
+      @include fix-width;
     }
   }
   // btn
