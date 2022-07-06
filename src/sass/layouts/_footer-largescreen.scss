@@ -1,0 +1,36 @@
+.footer {
+  background-color: $dark-color;
+  padding: 10px;
+  h2 {
+    display: flex;
+    justify-content: center;
+    font-size: $font-size-xlarge;
+    font-weight: 400;
+    font-family: Shrikhand;
+    color: $white-color;
+  }
+  .footer__container {
+    padding: 10px;
+  }
+  .footer-ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    line-height: 1.5;
+    .footer-ul__li-a {
+      font-weight: 600;
+      color: $white-color;
+      text-decoration: none;
+      opacity: 1;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  .footer-ul__li-icon {
+    width: 12px;
+    margin-right: 10px;
+    color: $white-color;
+  }
+}

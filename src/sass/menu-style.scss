@@ -1,5 +1,6 @@
 @import "utils/variables";
 @import "utils/keyframes";
+@import "utils/mixins";
 
 @media screen and (max-width: $breakpoints-tablet) {
   body {
@@ -79,7 +80,6 @@
 
       margin-top: 30px;
       height: 40px;
-      border-bottom: 2x solid $tertiary-color;
     }
     .menu__card {
       display: flex;
@@ -160,7 +160,7 @@
       white-space: nowrap;
       text-overflow: ellipsis;
       h4 {
-        font-size: 18px;
+        font-size: 17px;
         overflow: hidden;
         width: 100%;
         text-overflow: ellipsis;
@@ -181,16 +181,13 @@
       width: 15%;
     }
     .starter {
-      width: 92%;
-      margin: auto;
+      @include fix-width;
     }
     .dish {
-      width: 92%;
-      margin: auto;
+      @include fix-width;
     }
     .dessert {
-      width: 92%;
-      margin: auto;
+      @include fix-width;
     }
   }
   // btn
@@ -198,56 +195,12 @@
     display: flex;
     justify-content: center;
     background-color: $lightgray-color;
-    .menu__btn {
+    @import "components/gradient-btn";
+    .gradient-btn {
       height: 50px;
       width: 50%;
-      border-radius: 24px 24px 24px 24px;
-      background: linear-gradient(
-        to top left,
-        $primary-color,
-        $secondary-color
-      );
-      color: $white-color;
-      border: 0px transparent;
-      margin-top: 30px;
-      margin-bottom: 30px;
-      &:hover {
-        filter: brightness(1.1);
-        cursor: pointer;
-        box-shadow: 5px 5px 5px rgba(0, 0, 255, 0.2);
-      }
     }
   }
   //   footer
-  .footer {
-    background-color: $dark-color;
-    padding: 10px;
-    h2 {
-      font-size: $font-size-medium;
-      font-weight: 200;
-      font-family: Shrikhand;
-      color: $white-color;
-    }
-    .footer__container {
-      padding-left: 20px;
-    }
-    ul {
-      list-style-type: none;
-      padding: 0;
-      line-height: 1.5;
-      a {
-        color: $white-color;
-        text-decoration: none;
-        opacity: 1;
-        &:hover {
-          opacity: 0.8;
-        }
-      }
-    }
-    i {
-      width: 12px;
-      margin-right: 10px;
-      color: $white-color;
-    }
-  }
+  @import "layouts/footer-mobile";
 }

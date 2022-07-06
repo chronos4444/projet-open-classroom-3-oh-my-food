@@ -9,7 +9,6 @@
     font-family: Roboto, Times New Roman, Times, serif;
     background-color: $lightgray-color;
   }
-
   .main {
     display: flex;
     flex-direction: column-reverse;
@@ -75,26 +74,11 @@
         font-size: $font-size-xlarge;
         opacity: 0.6;
       }
-      .exploration-content__btn {
+      @import "components/gradient-btn";
+      .gradient-btn {
         font-size: $font-size-xlarge;
         height: 60px;
         width: 40%;
-        border-radius: 24px 24px 24px 24px;
-        background: linear-gradient(
-          to top left,
-          $primary-color,
-          $secondary-color
-        );
-        color: $white-color;
-        border: 0px transparent;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        box-shadow: 1px 0px 0px $darkgray-color;
-        &:hover {
-          filter: brightness(1.1);
-          cursor: pointer;
-          box-shadow: 5px 5px 5px rgba(0, 0, 255, 0.2);
-        }
       }
     }
   }
@@ -106,7 +90,7 @@
       display: flex;
       justify-content: center;
       margin: 0;
-      font-style: bold;
+      font-weight: bold;
       font-size: 30px;
       margin: 20px 0px 20px 0px;
     }
@@ -136,13 +120,14 @@
           }
         }
         .user-guide__number {
+          @include displayflex-center;
           font-size: $font-size-large;
           border: 1px solid;
           border-radius: 25px 25px 25px 25px;
           width: 24px;
           height: 24px;
           position: relative;
-          right: 16px;
+          right: 14px;
           color: $white-color;
           background-color: $primary-color;
         }
@@ -160,13 +145,12 @@
     background-color: $lightgray-color;
     h2 {
       font-size: 30px;
-      font-style: bold;
+      font-weight: bold;
       display: flex;
       justify-content: center;
     }
     .restaurant-list-container {
-      width: 92%;
-      margin: auto;
+      @include fix-width;
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
@@ -184,8 +168,17 @@
         transform: scale(1);
         transition-property: transform;
         transition-duration: 800ms;
+        position: relative;
         &:hover {
           transform: scale(1.12);
+        }
+        .card-restaurant__link {
+          cursor: pointer;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
         }
 
         .card-restaurant__header {
@@ -235,40 +228,5 @@
     }
   }
   // footer
-  .footer {
-    background-color: $dark-color;
-    padding: 10px;
-    h2 {
-      display: flex;
-      justify-content: center;
-      font-size: $font-size-xlarge;
-      font-weight: 400;
-      font-family: Shrikhand;
-      color: $white-color;
-    }
-    .footer__container {
-      padding-left: 20px;
-    }
-    .footer-ul {
-      display: flex;
-      justify-content: space-around;
-      list-style-type: none;
-      padding: 0;
-      line-height: 1.5;
-      .footer-ul__li-a {
-        font-weight: 600;
-        color: $white-color;
-        text-decoration: none;
-        opacity: 1;
-        &:hover {
-          opacity: 0.8;
-        }
-      }
-    }
-    .footer-ul__li-icon {
-      width: 12px;
-      margin-right: 10px;
-      color: $white-color;
-    }
-  }
+  @import "layouts/footer-largescreen";
 }

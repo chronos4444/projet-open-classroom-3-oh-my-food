@@ -36,41 +36,44 @@
         <div class="exploration-content">
             <h1>Réservez le menu qui vous convient</h1>
             <h2>Découvrez des restaurants d'exeption, sélectionnés par nos soins.</h2>
-            <button class="exploration-content__btn" type="button">Explorer nos restaurants</button>
+            <button class="gradient-btn" type="button">Explorer nos restaurants</button>
         </div>
     </section>
     <main class="main">
         <section class="user-guide">
-            <h2>Fonctionnement</h1>
-                <div class="user-guide__container">
-                    <!--Card 1-->
-                    <button class="user-guide__card">
-                        <div class="user-guide__number">1</div>
-                        <i class="fa-solid fa-mobile-screen-button"></i>
-                        <p class="user-guide__text">Choisissez un restaurant</p>
-                    </button>
-                    <!--Card 2-->
-                    <button class="user-guide__card">
-                        <div class="user-guide__number">2</div>
-                        <i class="fa-solid fa-list-ul"></i>
-                        <p class="user-guide__text">Composez votre menu</p>
-                    </button>
-                    <!--Card 3-->
-                    <button class="user-guide__card">
-                        <div class="user-guide__number">3</div>
-                        <i class="btnIcon fas fa-store"></i>
-                        <p class="user-guide__text">Dégustez au restaurant</p>
-                    </button>
+            <h2>Fonctionnement</h2>
+            <div class="user-guide__container">
+                <!--Card 1-->
+                <div class="user-guide__card">
+                    <div class="user-guide__number">
+                        <p>1</p>
+                    </div>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <p class="user-guide__text">Choisissez un restaurant</p>
                 </div>
+                <!--Card 2-->
+                <div class="user-guide__card">
+                    <div class="user-guide__number">2</div>
+                    <i class="fa-solid fa-list-ul"></i>
+                    <p class="user-guide__text">Composez votre menu</p>
+                </div>
+                <!--Card 3-->
+                <div class="user-guide__card">
+                    <div class="user-guide__number">3</div>
+                    <i class="btnIcon fas fa-store"></i>
+                    <p class="user-guide__text">Dégustez au restaurant</p>
+                </div>
+            </div>
         </section>
         <section class="restaurant-list">
             <h2>Restaurants</h2>
             <div class="restaurant-list-container">
                 <!--Card 1 la palette du goût-->
-                <a href="menu-la-palette.html" class="card-restaurant new">
+                <div class="card-restaurant new">
+                    <a href="menu-la-palette.html" class="card-restaurant__link"></a>
                     <div class="card-restaurant__header">
-                        <img class="card-restaurant__header-img" src="images/restaurants/1.jpg"
-                            alt="Restaurant la palette du goût">
+                        <a href="menu-la-palette.html"><img class="card-restaurant__header-img"
+                                src="images/restaurants/1.jpg" alt="Restaurant la palette du goût"></a>
                     </div>
                     <div class="card-restaurant__content">
                         <div class="card-restaurant__content-text">
@@ -82,12 +85,13 @@
                             <i class="card-restaurant__btn-icon-umpty fa-regular fa-heart"></i>
                         </button>
                     </div>
-                </a>
+                </div>
                 <!--Card 2 la note enchantée-->
-                <a href="menu-la-note.html" class="card-restaurant new">
+                <div class="card-restaurant new">
+                    <a href="menu-la-note.html" class="card-restaurant__link"></a>
                     <div class="card-restaurant__header">
-                        <img class="card-restaurant__header-img" src="images/restaurants/2.jpg"
-                            alt="Restaurant la note enchantée">
+                        <a href="menu-la-note.html"><img class="card-restaurant__header-img"
+                                src="images/restaurants/2.jpg" alt="Restaurant la note enchantée"></a>
                     </div>
                     <div class="card-restaurant__content">
                         <div class="card-restaurant__content-text">
@@ -99,12 +103,13 @@
                             <i class="card-restaurant__btn-icon-umpty fa-regular fa-heart"></i>
                         </button>
                     </div>
-                </a>
+                </div>
                 <!--Card 3 Restaurant français-->
-                <a href="menu-francais.html" class="card-restaurant">
+                <div class="card-restaurant">
+                    <a href="menu-francais.html" class="card-restaurant__link"></a>
                     <div class="card-restaurant__header">
-                        <img class="card-restaurant__header-img" src="images/restaurants/3.jpg"
-                            alt="Restaurant français">
+                        <a href="menu-francais.html"><img class="card-restaurant__header-img"
+                                src="images/restaurants/3.jpg" alt="Restaurant français"></a>
                     </div>
                     <div class="card-restaurant__content">
                         <div class="card-restaurant__content-text">
@@ -116,12 +121,13 @@
                             <i class="card-restaurant__btn-icon-umpty fa-regular fa-heart"></i>
                         </button>
                     </div>
-                </a>
+                </div>
                 <!--Card 4 Restaurant le délice des sens-->
-                <a href="menu-le-delice.html" class="card-restaurant">
+                <div class="card-restaurant">
+                    <a href="menu-le-delice.html" class="card-restaurant__link"></a>
                     <div class="card-restaurant__header">
-                        <img class="card-restaurant__header-img" src="images/restaurants/4.jpg"
-                            alt="Restaurant le délice des sens">
+                        <a href="menu-le-delice.html"><img class="card-restaurant__header-img"
+                                src="images/restaurants/4.jpg" alt="Restaurant le délice des sens"></a>
                     </div>
                     <div class="card-restaurant__content">
                         <div class="card-restaurant__content-text">
@@ -133,7 +139,7 @@
                             <i class="card-restaurant__btn-icon-umpty fa-regular fa-heart"></i>
                         </button>
                     </div>
-                </a>
+                </div>
             </div>
         </section>
     </main>

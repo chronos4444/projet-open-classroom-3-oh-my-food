@@ -167,22 +167,24 @@
     font-size: 24px;
     opacity: 0.6;
   }
-  .exploration .exploration-content .exploration-content__btn {
-    font-size: 24px;
-    height: 60px;
-    width: 40%;
+  .exploration .exploration-content .gradient-btn {
     border-radius: 24px 24px 24px 24px;
     background: linear-gradient(to top left, #9356dc, #ff79da);
     color: #ffffff;
     border: 0px transparent;
     margin-top: 30px;
     margin-bottom: 30px;
-    box-shadow: 1px 0px 0px #ebebeb;
+    box-shadow: 5px 5px 5px #ebebeb;
   }
-  .exploration .exploration-content .exploration-content__btn:hover {
+  .exploration .exploration-content .gradient-btn:hover {
     filter: brightness(1.1);
     cursor: pointer;
     box-shadow: 5px 5px 5px rgba(0, 0, 255, 0.2);
+  }
+  .exploration .exploration-content .gradient-btn {
+    font-size: 24px;
+    height: 60px;
+    width: 40%;
   }
   .user-guide {
     background-color: #ebebeb;
@@ -192,7 +194,7 @@
     display: flex;
     justify-content: center;
     margin: 0;
-    font-style: bold;
+    font-weight: bold;
     font-size: 30px;
     margin: 20px 0px 20px 0px;
   }
@@ -223,13 +225,16 @@
     color: #9356dc;
   }
   .user-guide .user-guide__container .user-guide__card .user-guide__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 20px;
     border: 1px solid;
     border-radius: 25px 25px 25px 25px;
     width: 24px;
     height: 24px;
     position: relative;
-    right: 16px;
+    right: 14px;
     color: #ffffff;
     background-color: #9356dc;
   }
@@ -244,7 +249,7 @@
   }
   .restaurant-list h2 {
     font-size: 30px;
-    font-style: bold;
+    font-weight: bold;
     display: flex;
     justify-content: center;
   }
@@ -268,9 +273,18 @@
     transform: scale(1);
     transition-property: transform;
     transition-duration: 800ms;
+    position: relative;
   }
   .restaurant-list .restaurant-list-container .card-restaurant:hover {
     transform: scale(1.12);
+  }
+  .restaurant-list .restaurant-list-container .card-restaurant .card-restaurant__link {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
   .restaurant-list .restaurant-list-container .card-restaurant .card-restaurant__header {
     height: 70%;
@@ -331,7 +345,6 @@
     visibility: inherit;
     animation: heart-slide 2s;
     animation-timing-function: ease-in-out;
-    transform-origin: translateY(-20px);
   }
   .restaurant-list .restaurant-list-container .card-restaurant .card-restaurant__btn:hover .card-restaurant__btn-icon-umpty {
     visibility: inherit;
@@ -361,7 +374,7 @@
     color: #ffffff;
   }
   .footer .footer__container {
-    padding-left: 20px;
+    padding: 10px;
   }
   .footer .footer-ul {
     display: flex;
