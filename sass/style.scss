@@ -1,0 +1,213 @@
+@import "utils/variables";
+@import "utils/keyframes";
+@import "utils/mixins";
+@import "components/loader";
+
+@media screen and (max-width: $breakpoints-tablet) {
+  body {
+    width: 100%;
+    font-family: Roboto, Times New Roman, Times, serif;
+    background-color: $lightgray-color;
+  }
+
+  .header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white-color;
+
+    .size-logo {
+      display: flex;
+      width: 160px;
+      height: 40px;
+    }
+  }
+  //  exploration
+
+  .exploration {
+    background-color: $lightgray-color;
+    .location {
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $darkgray-color;
+      i {
+        padding-right: 10px;
+      }
+      p {
+        font-weight: 600;
+      }
+    }
+    .exploration-content {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      h1 {
+        width: 60%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-weight: 1000;
+        font-size: $font-size-large;
+        margin-top: 30px;
+      }
+      h2 {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-weight: 400;
+        font-style: normal;
+        font-size: $font-size-large;
+        opacity: 0.6;
+      }
+      @import "components/gradient-btn";
+      .gradient-btn {
+        height: 50px;
+        width: 65%;
+      }
+    }
+  }
+  // user-guide
+  .user-guide {
+    background-color: $white-color;
+    padding: 5%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    h2 {
+      margin-left: 1%;
+      font-weight: bold;
+      font-size: $font-size-xlarge;
+    }
+    .user-guide__container {
+      display: flex;
+      flex-direction: column;
+      .user-guide__card {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        background-color: $lightgray-color;
+        border-radius: 16px 16px 16px 16px;
+        box-shadow: 4px 4px 6px $lightgray-color;
+        border: 0px transparent;
+        height: 80px;
+        i {
+          font-size: $font-size-large;
+          width: 50px;
+          color: $dark-color;
+        }
+        &:active {
+          background-color: $primary-color-light;
+
+          i {
+            color: $primary-color;
+          }
+        }
+        .user-guide__number {
+          @include displayflex-center;
+          font-size: $font-size-large;
+          border: 1px solid;
+          border-radius: 25px 25px 25px 25px;
+          width: 24px;
+          height: 24px;
+          position: relative;
+          right: 13px;
+          color: $white-color;
+          background-color: $primary-color;
+        }
+        .user-guide__text {
+          font-size: $font-size-large;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  //   restaurant-list
+  .restaurant-list {
+    background-color: $lightgray-color;
+    h2 {
+      font-size: $font-size-xlarge;
+      font-weight: bold;
+      margin-left: 5%;
+      margin-bottom: 7%;
+      padding-top: 11%;
+    }
+    .restaurant-list-container {
+      @include fix-width;
+
+      .card-restaurant {
+        display: flex;
+        flex-direction: column;
+        background-color: $white-color;
+        width: 100%;
+        height: 230px;
+        margin-bottom: 5%;
+        text-decoration: none;
+        color: inherit;
+        border-radius: 16px 16px 16px 16px;
+        position: relative;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .card-restaurant__link {
+          cursor: pointer;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+        .card-restaurant__header {
+          height: 70%;
+          background-size: cover;
+          position: relative;
+          overflow: hidden;
+          .card-restaurant__header-img {
+            min-width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px 16px 0px 0px;
+          }
+        }
+        .card-restaurant__content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 16px;
+          .card-restaurant__content-text {
+            margin: 0;
+            .card-restaurant__title {
+              font-size: $font-size-large;
+              font-weight: bold;
+              margin: 0;
+            }
+            .card-restaurant__subtitle {
+              font-size: $font-size-medium;
+              margin: 0;
+              font-weight: 400;
+            }
+          }
+        }
+        @import "components/heart-cards";
+      }
+    }
+    .card-restaurant.new .card-restaurant__header::after {
+      font-size: 14px;
+      content: "Nouveau";
+      position: absolute;
+      padding: 6px 10px;
+      background-color: $tertiary-color;
+      color: $new-btn-text-color;
+      right: 5%;
+      top: 6%;
+    }
+  }
+  // footer
+  @import "layouts/footer-mobile";
+}

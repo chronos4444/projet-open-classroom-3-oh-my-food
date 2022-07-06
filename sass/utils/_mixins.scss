@@ -1,0 +1,15 @@
+// global
+@mixin displayflex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin fix-width {
+  width: 92%;
+  margin: auto;
+}
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+// menu

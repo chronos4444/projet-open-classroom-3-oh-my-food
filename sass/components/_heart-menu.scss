@@ -1,0 +1,35 @@
+.menu-main-title__btn {
+  border: none;
+  background-color: $lightgray-color;
+  cursor: pointer;
+  background-clip: text;
+  margin: 0;
+  height: 24px;
+  .menu-main-title__btn-icon-fill {
+    visibility: hidden;
+    background-image: linear-gradient(200deg, $primary-color, $secondary-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: $font-size-xlarge;
+    margin: 0;
+  }
+  .menu-main-title__btn-icon-umpty {
+    font-size: $font-size-xlarge;
+    font-weight: 100;
+  }
+  &:hover {
+    .menu-main-title__btn-icon-fill {
+      position: relative;
+      left: 53.9%;
+      visibility: inherit;
+      animation: heart-slide 2s;
+      animation-timing-function: ease-in-out;
+    }
+    .menu-main-title__btn-icon-umpty {
+      visibility: inherit;
+      transform: scale(1);
+      animation: opacity-heart 2s forwards;
+    }
+  }
+}

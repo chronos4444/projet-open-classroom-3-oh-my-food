@@ -1,0 +1,35 @@
+.card-restaurant__btn {
+  border: none;
+  background-color: $white-color;
+  cursor: pointer;
+  background-clip: text;
+  position: relative;
+  height: 24px;
+  .card-restaurant__btn-icon-fill {
+    visibility: hidden;
+    background-image: linear-gradient(200deg, $primary-color, $secondary-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: $font-size-xlarge;
+    margin: 0;
+  }
+  .card-restaurant__btn-icon-umpty {
+    font-size: $font-size-xlarge;
+    font-weight: 100;
+  }
+  &:hover {
+    .card-restaurant__btn-icon-fill {
+      position: relative;
+      left: 53.9%;
+      visibility: inherit;
+      animation: heart-slide 2s;
+      animation-timing-function: ease-in-out;
+    }
+    .card-restaurant__btn-icon-umpty {
+      visibility: inherit;
+      transform: scale(1);
+      animation: opacity-heart 2s forwards;
+    }
+  }
+}
